@@ -1,60 +1,236 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>The 3 Big Restaurants</title>
-    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACNDYABgt/8AUqb/AEia/wBImv8ARpf/AEaX/wBGl/8ARpf/AEaX/wBDlP8AQ5T/AEOU/wAYNmAAAAAAACNDYABuyv8AkfX/E6f+/xOn/v8Rpf7/AJj9/wCE5f8AfNv/AHzb/wB82/8AZL3/AGC5/wBguf8AUqf/ABg2YABgt/8AhOX/AJj9/za8/v8jtP7/IbL+/wCY/f8AmP3/AHzb/wBx1/8AaNP/AGPO/wBguf8AYLn/AGC5/wBDlP8AXbP/AGjB/wBxzP8Accz/AHHM/wBxzP8Accz/AGfC/wBg0P9wneH/ILft/wCD5f8AVsT/AEue/wBLnv8AQJD/AF2z/wZu6v8Gbur/BTms/wUVgf8FGYX/BGfh/wBq1/8Vvff/UfD//zHt//8AtP//AIPl/wNa0f8GaeT/AECQ/wAMECACNJr/Bgh8/wMR0P8BFfj/AAmg/wCQJP8CXEL/Bgh6/wYIev8GCHz/Bgh6/wYIev8GDHX/Bgx1/wEBCxgArxj/AKUm/wE3x/8BN8f/AJgn/wCfPP8AtHf/AKZi/wBZVP8BMMn/ATDJ/wAfi/8AUF3/AJUz/wCVM/8ALQtQALMj/x7Yhv8Av0j/AL9I/wDLhv8AxoP/JOWs/wDWjf8At27/AJpC/wCaQv8AmkL/AKRd/wCrcf8Aq3H/AJIp/wBNF38AfY//AH2P/wB9j/8Aa4P/AGuD/wB9j/8AfY//AH2P/wBrg/8Aa4P/AGuD/wBrg/8Aa4P/AGuD/wBAG38AT5nfAG/L/wBvy/8Ab8v/AG/L/wBvy/8Ab8v/AG/L/wBvy/8Ab8v/AG/L/wBZsP8AWbD/AFmw/wBZsP8AOH7fAGC3/wCD5P8Al/z/AJf8/wCX/P8Al/z/AJf8/wCX/P8Al/z/AIHh/wB82/8Ae9r/AHLO/wBguf8AYLn/AEOU/wBjuv8Tp/7/Lbz+/wqg/f8KoP3/AJj9/wSb/f84xP//EaX+/wCY/f8AmP3/AHzb/wByz/8AYLn/AGC5/wBDlP8ARoa/AJT4/yu6/v9i2f//Qsz//xeq/v8In/3/AJj9/wCY/f8AmP3/AI/y/wB82/8Acs//AGC5/wBetv8AMGy/AAAAAABGhr8Aedb/CH/W/x+w/v8fsP7/EaX+/wCY/f8Alfn/AInr/wB82/8Abcn/AFOn/wBPo/8AMGy/AAAAAAAAAAAAAAAAABoySAAaMkgAZLz/AG7I/wBuyP8Absj/AF2z/wBRpf8AUaX/AESV/wASKUgAEilIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJERgACREYAAkRGAAGDhgABg4YAAYOGAAAAAAAAAAAAAAAAAAAAAAAAAAAwAMAAIABAAAAAAAAAAAAAAAAAACAAQAAAAEAAAAAAACAAQAAAAAAAAAAAAAAAAAAAAAAAIABAADwDwAA//8AAA==" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <title>Mathy</title>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      margin: 0;
+      padding-bottom: 100px;
+    }
+    h1 {
+      margin-top: 30px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    input[type="number"] {
+      font-size: 16px;
+      padding: 5px;
+      width: 100px;
+    }
+    #quiz-result {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    #quiz-progress, #quiz-score {
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    .bottom-box {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #444;
+      color: white;
+      padding: 15px;
+      font-size: 14px;
+    }
+    a {
+      color: lightblue;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+  </style>
 </head>
 <body>
-    <h1> All About The Big 3 Restaurants</h1>
-    <h2>McDonalds</h2><p>McDonalds is one of the world's biggest food chain. It's famous of it's Big Mac, Happy Meal, Chicken McNuggets, etc. It was founded in 1940.</p>
-     <h2>Burger King</h2><p>Burger King is one of the world's biggest food chain. It's famous for its Whopper and Whopper Jr. It was founded in 1953.</p>
-     <h2> Chick-fil-a</h2><p> Chick-fil-a is one of the world's biggest food chain. It's famous for it's chicken sandwiches. It's been a private company ever since it was founded in 1946. </p>
-    <a href="https://www.mcdonalds.com/us/en-us.html">McDonalds</a>
-    <a href="https://www.bk.com/">Burger King</a>
-    <a href="https://www.chick-fil-a.com/">Chick-fil-a</a>
-    <table>
-  <thead>
-    <tr>
-      <th><strong>Rating</strong></th>
-      <th><Strong> Popularity </Strong></th>
-      <th><Strong>How many stores</Strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>McDonalds</th>
-      <td>69 million daily</td>
-      <td>around 13,400</td>
-    </tr>
-    <tr>
-      <th>Burger King</th>
-      <td>11 million daily</td>
-      <td>over 17,000</td>
-    </tr>
-    <tr>
-      <th>Chick-fil-a</th>
-      <td>2 million daily</td>
-      <td>2,600</td>
-    </tr>
-  </tbody>
-</table>
-<ul>
-  <li class="best">Mcdonalds <span><strong><em>1st👑</em></strong></span></li> 
-  <li> Burger King <em>2nd</em></li>
-  <li>Chick-fil-a <em>3rd</em></li>
-</ul>
-<img
-src="https://tse3.mm.bing.net/th/id/OIP.gkOIIVnpDKtxIa97k1786QHaHa?pid=ImgDet&w=474&h=474&rs=1&o=7&rm=3"
-alt="Picture of McDonalds"/>
-<img
-src="https://tse4.mm.bing.net/th/id/OIP.sALR_WfsFv1WwmggILsLeQHaHe?pid=ImgDet&w=174&h=175.71597633136093&c=7&dpr=1.3&o=7&rm=3"
-alt="Picture of Burger King"/>
-<img
-src="https://tse2.mm.bing.net/th/id/OIP.6q1W2mjgNvK6rz0ghKSZ4wHaEK?pid=ImgDet&w=197&h=110.8125&c=7&dpr=1.3&o=7&rm=3"
-alt="Picture of Chick-fil-a"/>
+
+  <!-- Math Learning Buttons -->
+  <h1>Math Learning</h1>
+  <p>Click one of the buttons below to learn about:</p>
+  <a href="https://www.khanacademy.org/math/arithmetic/arith-review-add-subtract" target="_blank"><button>Add</button></a>
+  <a href="https://www.khanacademy.org/math/arithmetic/arith-review-add-subtract/arith-review-subtracting" target="_blank"><button>Subtract</button></a>
+  <a href="https://www.khanacademy.org/math/arithmetic/arith-review-multiply-divide/arith-review-multiplication" target="_blank"><button>Multiply</button></a>
+  <a href="https://www.khanacademy.org/math/arithmetic/arith-review-multiply-divide/arith-review-division" target="_blank"><button>Divide</button></a>
+
+  <!-- Quiz Section -->
+  <h1>Math Quiz</h1>
+  <p id="quiz-question"></p>
+  <input type="number" id="quiz-answer" placeholder="Your answer" />
+  <div>
+    <button id="submit-btn">Submit</button>
+    <button id="next-btn">Next Question</button>
+  </div>
+  <div id="quiz-result"></div>
+  <p id="quiz-progress"></p>
+  <p id="quiz-score"></p>
+  <p> Don't forget to press the Submit first!</p>
+
+  <!-- Footer -->
+  <div class="bottom-box">
+    <p>© 2025 inspired by <a href="http://www.math.com/">Math.com</a></p>
+    <a href="https://www.azquotes.com/quotes/topics/mathematics.html">Math Quotes</a> |
+    <a href="https://www.calculator.net/">Calculator</a> |
+    <a href="https://tinyurl.com/yc87jp9x">Math Games</a> |
+    <a href="https://www.google.com/search?q=math+learning+websites">Math Learning Websites</a>
+  </div>
+
+  <script>
+    window.onload = function () {
+      console.log("DOM fully loaded, initializing quiz...");
+
+      const questions = [
+        { question: "What is 6 × 7?", answer: 42 },
+        { question: "What is 10 + 5?", answer: 15 },
+        { question: "What is 9 - 3?", answer: 6 },
+        { question: "What is 8 × 2?", answer: 16 },
+        { question: "What is 12 ÷ 4?", answer: 3 },
+        { question: "What is 7 + 8?", answer: 15 },
+        { question: "What is 20 ÷ 5?", answer: 4 },
+        { question: "What is 5 × 5?", answer: 25 },
+        { question: "What is 18 - 6?", answer: 12 },
+        { question: "What is 4 + 9?", answer: 13 },
+        { question: "What is 15 + 14?", answer: 29 },
+        { question: "What is 24 ÷ 6?", answer: 4 },
+        { question: "What is 7 × 3?", answer: 21 },
+        { question: "What is 30 - 12?", answer: 18 },
+        { question: "What is 9 + 10?", answer: 19 },
+        { question: "What is 16 ÷ 2?", answer: 8 },
+        { question: "What is 11 × 4?", answer: 44 },
+        { question: "What is 22 - 9?", answer: 13 },
+        { question: "What is 8 + 15?", answer: 23 },
+        { question: "What is 27 ÷ 3?", answer: 9 },
+        { question: "What is 6 × 6?", answer: 36 },
+        { question: "What is 20 - 7?", answer: 13 },
+        { question: "What is 13 + 12?", answer: 25 },
+        { question: "What is 18 ÷ 9?", answer: 2 },
+        { question: "What is 4 × 9?", answer: 36 },
+        { question: "What is 25 - 15?", answer: 10 },
+        { question: "What is 14 + 11?", answer: 25 },
+        { question: "What is 36 ÷ 6?", answer: 6 },
+        { question: "What is 7 × 8?", answer: 56 },
+        { question: "What is 30 - 18?", answer: 12 },
+        { question: "What is 21 + 7?", answer: 28 },
+        { question: "What is 28 ÷ 4?", answer: 7 },
+        { question: "What is 9 × 5?", answer: 45 },
+        { question: "What is 19 - 6?", answer: 13 },
+        { question: "What is 15 + 16?", answer: 31 },
+        { question: "What is 24 ÷ 8?", answer: 3 },
+        { question: "What is 10 × 7?", answer: 70 },
+        { question: "What is 33 - 17?", answer: 16 },
+        { question: "What is 14 + 13?", answer: 27 },
+        { question: "What is 20 ÷ 10?", answer: 2 },
+        { question: "What is 12 × 3?", answer: 36 },
+        { question: "What is 28 - 11?", answer: 17 },
+        { question: "What is 17 + 6?", answer: 23 },
+        { question: "What is 40 ÷ 5?", answer: 8 },
+        { question: "What is 8 × 7?", answer: 56 },
+        { question: "What is 22 - 8?", answer: 14 },
+        { question: "What is 13 + 9?", answer: 22 },
+        { question: "What is 18 ÷ 3?", answer: 6 },
+        { question: "What is 5 × 9?", answer: 45 },
+        { question: "What is 30 - 21?", answer: 9 },
+        { question: "What is 16 + 17?", answer: 33 }
+      ];
+
+      let currentQuestion = null;
+      const totalQuestions = 10;
+      let score = 0;
+      let questionsAsked = 0;
+
+      const questionEl = document.getElementById("quiz-question");
+      const answerEl = document.getElementById("quiz-answer");
+      const resultEl = document.getElementById("quiz-result");
+      const submitBtn = document.getElementById("submit-btn");
+      const nextBtn = document.getElementById("next-btn");
+      const progressEl = document.getElementById("quiz-progress");
+      const scoreEl = document.getElementById("quiz-score");
+
+      if (!questionEl || !answerEl || !resultEl || !submitBtn || !nextBtn) {
+        console.error("One or more quiz elements not found!");
+        return;
+      }
+
+      function loadRandomQuestion() {
+        if (questionsAsked >= totalQuestions) {
+          alert(`🎉 Quiz complete! Your final score: ${score} out of ${totalQuestions}. Starting over.`);
+          score = 0;
+          questionsAsked = 0;
+        }
+
+        const idx = Math.floor(Math.random() * questions.length);
+        currentQuestion = questions[idx];
+        questionEl.textContent = currentQuestion.question;
+        answerEl.value = "";
+        answerEl.style.display = "inline-block";
+        submitBtn.style.display = "inline-block";
+        nextBtn.style.display = "inline-block";
+        resultEl.textContent = "";
+        questionsAsked++;
+        progressEl.textContent = `Question ${questionsAsked} of ${totalQuestions}`;
+        scoreEl.textContent = `Score: ${score}`;
+        submitBtn.disabled = false;
+
+        console.log("Loaded question:", currentQuestion.question);
+      }
+
+      function checkAnswer() {
+        const userInput = answerEl.value.trim();
+
+        if (userInput === "") {
+          resultEl.textContent = "⚠️ Please enter a number.";
+          resultEl.style.color = "orange";
+          return;
+        }
+
+        const userAnswer = Number(userInput);
+
+        if (isNaN(userAnswer)) {
+          resultEl.textContent = "❗ That's not a valid number.";
+          resultEl.style.color = "red";
+          return;
+        }
+
+        if (!Number.isInteger(userAnswer)) {
+          resultEl.textContent = "ℹ️ Please enter a whole number.";
+          resultEl.style.color = "blue";
+          return;
+        }
+
+        if (userAnswer === currentQuestion.answer) {
+          resultEl.textContent = "✅ Correct!";
+          resultEl.style.color = "green";
+          score++;
+        } else {
+          resultEl.textContent = `❌ Incorrect. The correct answer was ${currentQuestion.answer}.`;
+          resultEl.style.color = "red";
+        }
+
+        scoreEl.textContent = `Score: ${score}`;
+
+        submitBtn.disabled = true; // disable submit after answer
+      }
+
+      submitBtn.addEventListener("click", checkAnswer);
+
+      nextBtn.addEventListener("click", () => {
+        loadRandomQuestion();
+      });
+
+      loadRandomQuestion();
+    };
+  </script>
+  
 
 </body>
 </html>
